@@ -32,5 +32,6 @@ namespace :db do
   
   desc 'fill database with dummy data'
   task :seed do 
-    require_relative './config/'
+    require_relative './db/seeds.rb' 
+  end
 end
