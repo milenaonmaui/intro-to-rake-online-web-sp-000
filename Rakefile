@@ -14,3 +14,12 @@ namespace :greeting do
     puts "hola de Rake!"
  end
 end
+
+desc 'drop into the Pry console'
+taks :console => :environment do 
+  Pry.start 
+end
+
+task :environment do 
+  require_relative './config/environment'
+end
